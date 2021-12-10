@@ -1,2 +1,2 @@
-# AirportsApp
+# ru.bmstu.AirportsApp
 Лабораторная работа 2 по курсу "Базы данных"

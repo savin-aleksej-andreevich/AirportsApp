@@ -1,2 +1,4 @@
-package ru.bmstu;public class AirportsReducer {
+package ru.bmstu;
+
+public class AirportsReducer {
 }
