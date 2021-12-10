@@ -15,8 +15,8 @@ public class AirportsApp {
         }
         //hadoop jar target/WordCountApp-1.0-SNAPSHOT.jar WordCountApp warandpeace1.txt output
         Job job = Job.getInstance();
-        job.setJarByClass(WordCountApp.class);
-        job.setJobName("Word count");
+        job.setJarByClass(AirportsApp.class);
+        job.setJobName("Airports app");
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
         job.setMapperClass(WordMapper.class);
