@@ -20,8 +20,6 @@ public class AirportsReducer extends Reducer <AirportsWritableComparable, Text, 
             sum = sum + delay;
             count++;
         }
-        if (count > 0) {
-            context.write(new Text("Airport: " + airport), new Text("min = " + min + ", max + " + max + ", sum = " + sum));
-        }
+        if (count > 0) context.write(new Text("Airport: " + airport), new Text("min = " + min + ", max + " + max + ", sum = " + sum));
     }
 }
