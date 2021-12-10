@@ -5,6 +5,7 @@ import org.apache.hadoop.io.WritableComparable;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
+import java.util.Objects;
 
 public class AirportsWritableComparable implements WritableComparable {
     private int airportId, indicator;
@@ -52,5 +53,24 @@ public class AirportsWritableComparable implements WritableComparable {
         this.indicator = dataInput.readInt();
     }
 
+    @Override
+    public String toString() {
+        return "AirportsWritableComparable{" +
+                "airportId=" + airportId +
+                ", indicator=" + indicator +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AirportsWritableComparable that = (AirportsWritableComparable) o;
+        return airportId == that.airportId && indicator == that.indicator;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(airportId, indicator);
+    }
 }
