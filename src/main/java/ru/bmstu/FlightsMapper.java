@@ -1,4 +1,9 @@
 package ru.bmstu;
 
-public class FlightsMapper extends m{
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+
+public class FlightsMapper extends Mapper<LongWritable, Text, AirportsWritableComparable, Text> {
+
 }
