@@ -14,6 +14,7 @@ public class AirportsMapper extends Mapper<LongWritable, Text, AirportsWritableC
         if (key.get() > 0) {
             int airportId = Integer.parseInt(params[INDEX_ID].split("\"")[0]);
             String airportName = params[INDEX_NAME].split("\"")[0];
+            context.write(new AirportsWritableComparable(airportId, AIRPORD_INDICATOR), new Text(airportName));
         }
     }
 }
