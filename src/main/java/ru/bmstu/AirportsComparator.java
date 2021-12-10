@@ -1,2 +1,4 @@
-package ru.bmstu;public class AirportsComparator {
+package ru.bmstu;
+
+public class AirportsComparator {
 }

@@ -26,10 +26,14 @@ public class AirportsApp {
 
         job.setMapOutputKeyClass(AirportsWritableComparable.class);
         job.setMapOutputValueClass(Text.class);
-        job.setReducerClass(WordReducer.class);
-        
+        job.setPartitionerClass(AirportsPartitioner.class);
+        job.setGroupingComparatorClass(AirportsComparator.class);
+
+        FileOutputFormat.setOutputPath(job, new Path(args[2]));
+        job.setReducerClass(AirportsReducer.class);
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
+        job.setOutputValueClass(Text.class);
+
         job.setNumReduceTasks(2);
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
