@@ -9,8 +9,8 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class AirportsApp {
     public static void main(String[] args) throws Exception {
-        if (args.length != 2) {
-            System.err.println("Usage: WordCountApp <input path> <output path>");
+        if (args.length != 3) {
+            System.err.println("Usage: AirportsApp <input path> <output path>");
             System.exit(-1);
         }
         //hadoop jar target/WordCountApp-1.0-SNAPSHOT.jar WordCountApp warandpeace1.txt output
