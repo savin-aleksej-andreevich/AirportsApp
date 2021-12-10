@@ -23,8 +23,8 @@ public class AirportsApp {
 
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, FlightsMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, AirportsMapper.class);
-        
-        job.setMapperClass(WordMapper.class);
+
+        job.setMapOutputKeyClass(A);
         job.setReducerClass(WordReducer.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
