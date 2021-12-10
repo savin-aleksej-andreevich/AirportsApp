@@ -34,7 +34,10 @@ public class AirportsWritableComparable implements WritableComparable {
 
     @Override
     public int compareTo(Object o) {
-        return 0;
+        AirportsWritableComparable otherAirport = (AirportsWritableComparable) o;
+        if (this.airportId > otherAirport.airportId) return 1;
+        if (this.airportId < otherAirport.airportId) return -1;
+        return Integer.compare(this.indicator, otherAirport.indicator);
     }
 
     @Override
@@ -48,4 +51,6 @@ public class AirportsWritableComparable implements WritableComparable {
         this.airportId = dataInput.readInt();
         this.indicator = dataInput.readInt();
     }
+
+
 }
