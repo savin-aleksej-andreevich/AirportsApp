@@ -1,2 +1,4 @@
-package ru.bmstu;public class FlightsMapper {
+package ru.bmstu;
+
+public class FlightsMapper {
 }
