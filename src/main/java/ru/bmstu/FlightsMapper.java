@@ -1,4 +1,4 @@
 package ru.bmstu;
 
-public class FlightsMapper {
+public class FlightsMapper extends m{
 }
